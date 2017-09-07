@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>angular-webapp</title>
+    <link rel="stylesheet" href="css/mdui.css">    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-app="myApp" class="mdui-bottom-nav-fixed">
+    <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-blue">
+        <a href="javascript:void(0);" ui-sref-active="mdui-bottom-nav-active" class="mdui-ripple mdui-ripple-white" ui-sref="home({id:1111})">
+            <i class="mdui-icon material-icons">home</i>
+            <label>主页</label>
+        </a>
+
+        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white" ui-sref="pic({id:2222})">
+            <i class="mdui-icon material-icons">picture_in_picture</i>
+            <label>美图</label>
+        </a>
+        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white" ui-sref="mood({id:3333})">
+            <i class="mdui-icon material-icons">mood</i>
+            <label>心情</label>
+        </a>
+
+        <a href="javascript:void(0);" class="mdui-ripple mdui-ripple-white" ui-sref="setting({id:4444})">
+            <i class="mdui-icon material-icons">settings</i>
+            <label>设置</label>
+        </a>                    
+    </div>
+   <ui-view  class="mdui-container" ng-animate="slide"></ui-view>
+</body>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="vendor/mdui/dist/js/mdui.min.js"></script>
+<script src="js/index.js"></script>
+</html>
