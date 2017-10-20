@@ -1,0 +1,28 @@
+@import url(../variable.less);
+
+.header{
+    background:@defaultBgColor data-uri('../image/head.png') no-repeat;
+    background-position: 1rem center;
+    border-bottom: 1px solid lighten(@defaultColor, 30%);
+    .bs(37.5,37.5);
+    .pt(10);
+    .pb(10);
+    .mdui-textfield-expandable.mdui-textfield-expanded {
+        width: 60%;
+    }
+    .mdui-textfield-expandable.mdui-float-right{
+        .mr(10)
+    }
+  }
+  .fixheader{
+    position: fixed;
+    left:0;
+    right:0;
+  }
+  .fixheader{
+    top:0;
+    z-index: 2;
+  }
+
+  
+

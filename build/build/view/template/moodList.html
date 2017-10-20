@@ -1,0 +1,19 @@
+<div>
+    <div class="mdui-container-fulid">
+        <ul class="mdui-list">
+          <li class="mdui-list-item showMood"  ng-repeat="item in data">
+            <a class="newlist">
+                  心情发布时间：<span class="text-muted" ng-bind="item.upTime"><br/><br/><br/></span>
+                  <span ng-bind="item.name"><br/></span>
+                  <div class="mdui-row">
+                    <span class="mdui-col-xs-3 text-nowrap" ng-click="toggle(item,'loveNum','checkedL')" ng-class="checked"><i class="mdui-icon material-icons">thumb_up</i>{{item.loveNum}}</span>
+                    <span class="mdui-col-xs-3 text-nowrap"  ng-click="toggle(item,'hateNum','checkedH')" ng-class="{'checked-G':(temp.selectNew==item.newId)&&checkM.checkedH}"><i class="mdui-icon material-icons">thumb_down</i>{{item.hateNum}}</span>
+                    <span class="mdui-col-xs-6 text-nowrap"  ng-click="++item.visitNum">阅读量({{item.visitNum}})</span>
+                  </div>
+            </a>
+          </li>
+          <p class="mdui-col-xs-12 mdui-text-center last-p" ng-show="data.length">我是有底线的</p>
+          <p class="mdui-col-xs-12" ng-show="!data.length">心情列表为空</p>
+        </ul>
+    </div>
+</div>

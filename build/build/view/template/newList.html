@@ -1,0 +1,26 @@
+<div>
+    <div class="mdui-container-fulid">
+        <ul class="mdui-list">
+          <li class="mdui-list-item"  ng-repeat="item in data">
+            <a class="newlist">
+              <div class="mdui-list-item-avatar newListLeft mdui-float-left"></div>
+              <div class="mdui-list-item-content">
+                <small class="mdui-typo-caption-opacity">新闻发布时间：{{item.upTime}}<br/></small>
+                <div class="mdui-list-item-title" ng-bind="item.name" ng-show="item.name"></div>
+                <div class="mdui-list-item-text mdui-list-item-one-line"  ng-bind="item.newTest.substring(0,20)" ng-show="item.newTest">
+                </div>
+                <div class="mdui-float-right btn-group">
+                  <span class="mdui-col-xs-3 text-nowrap" ng-click="toggle(item,'loveNum','checkedL')" ng-class="checked"><i class="mdui-icon material-icons">thumb_up</i>{{item.loveNum}}</span>
+                  <span class="mdui-col-xs-3 text-nowrap"  ng-click="toggle(item,'hateNum','checkedH')" ng-class="{'checked-G':(temp.selectNew==item.newId)&&checkM.checkedH}"><i class="mdui-icon material-icons">thumb_down</i>{{item.hateNum}}</span>
+                  <span class="mdui-col-xs-6 text-nowrap"  ng-click="++item.visitNum">阅读量({{item.visitNum}})</span>
+                </div>
+              </div>
+
+            </a>
+
+          </li>
+          <p class="mdui-col-xs-12 mdui-text-center last-p" ng-show="data.length">我是有底线的</p>
+          <p class="mdui-col-xs-12" ng-show="!data.length">新闻列表为空</p>
+        </ul>
+    </div>
+</div>

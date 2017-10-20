@@ -1,0 +1,10 @@
+<div>
+    <div class="showSetting mdui-container-fulid">
+        <ul>
+            <li class="mdui-text-center bg_root set_title">个人设置</li>
+          <li class="mdui-col-xs-12" ng-repeat="item in data" ><i class="mdui-icon material-icons">{{item.icon}}</i>{{item.text}}</li>
+        </ul>
+        <p class="mdui-col-xs-12 mdui-text-center last-p" ng-show="data.length">我是有底线的</p>
+        <p class="mdui-col-xs-12" ng-show="!data.length">设置列表为空</p>       
+    </div>
+</div>

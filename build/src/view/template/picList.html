@@ -1,0 +1,27 @@
+<div>
+    <div class="mdui-container-fulid">
+        <ul class="mdui-list">
+          <li class="mdui-col-xs-6 mdui-col-sm-4 mdui-list-item"   ng-repeat="item in data">
+            <a class="thumbnail" ng-title='item.newTest.substring(0,20)'>
+              <div class="mdui-card">
+                <div class="mdui-card-media">
+                  <img ng-src="{{item.imgUrl}}"/>
+                  <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary showPic">
+                      <div class="mdui-card-primary-title">{{item.name}}</div>
+                      <div class="mdui-card-primary-subtitle">{{item.upTime}}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mdui-card-actions  mdui-center">
+                    <span class="mdui-col-xs-6 text-nowrap" ng-click="toggle(item,'loveNum','checkedL')" ng-class="checked"><i class="mdui-icon material-icons">thumb_up</i>{{item.loveNum}}</span>
+                    <span class="mdui-col-xs-6 text-nowrap"  ng-click="toggle(item,'hateNum','checkedH')" ng-class="{'checked-G':(temp.selectNew==item.newId)&&checkM.checkedH}"><i class="mdui-icon material-icons">thumb_down</i>{{item.hateNum}}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <p class="mdui-col-xs-12 mdui-text-center last-p" ng-show="data.length">我是有底线的</p>
+          <p class="mdui-col-xs-12" ng-show="!data.length">图片列表为空</p>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+
+@import url(template/head.less);
+@import url(template/newList.less);
+@import url(template/picList.less);
+@import url(template/moodList.less);
+@import url(template/setList.less);
+.fs(@px){
+    font-size: unit(@px/37.5,rem);
+}
+.w(@px){
+    width: unit(@px/37.5,rem);
+}
+
+.h(@px){
+    height: unit(@px/37.5,rem);
+}
+.mboth(@x,@y){
+    margin: unit(@x/37.5,rem) unit(@x/37.5,rem);
+}
+.mt(@px){
+    margin-top: unit(@px/37.5,rem);
+}
+.mr(@px){
+    margin-right: unit(@px/37.5,rem);
+}
+
+.mb(@px){
+    margin-bottom: unit(@px/37.5,rem);
+}
+.ml(@px){
+    margin-left: unit(@px/37.5,rem);
+}
+.pt(@px){
+    padding-top: unit(@px/37.5,rem);
+}
+.pr(@px){
+    padding-right: unit(@px/37.5,rem);
+}
+
+.pb(@px){
+    padding-bottom: unit(@px/37.5,rem);
+}
+.pl(@px){
+    padding-left: unit(@px/37.5,rem);
+}
+
+.bs(@x,@y){
+    background-size: unit(@x/37.5,rem) unit(@y/37.5,rem);
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    .fs(16)
+}
+
+.last-p{
+    line-height: 2.0;
+    word-spacing: 0.8em;
+    display: inline-block;
+    position: relative;
+}
+
+.last-p:before, .last-p:after {
+    content: '';                 /*CSS伪类用法*/
+    position: absolute;         /*定位背景横线的位置*/
+    top: 52%;
+    background: lighten(@defaultColor, 30%);      /*宽和高做出来的背景横线*/
+    width: 25%;
+    height: 2px;
+}
+.last-p:before{
+    left: 8%;        /*调整背景横线的左右距离*/
+}
+.last-p:after {
+    right: 8%;
+}
+
+.text-nowrap{
+    white-space: nowrap;
+}
+
+.checked-G{
+    color: @defaultColor !important;
+}
+:root {
+    //--c: #FF9393;
+    --c: #ffd9e6;
+  }
+  .bg_root{
+      background:var(--c);
+  }
